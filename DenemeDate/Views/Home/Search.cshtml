@@ -1,0 +1,27 @@
+﻿@model IEnumerable<DenemeDate.Models.Users>
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>Search</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
